@@ -1,0 +1,30 @@
+# === Backend (Node.js) ===
+backend/node_modules/
+backend/.env
+backend/.env.*
+backend/.vscode/
+backend/logs/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+
+# === Frontend (React) ===
+frontend/node_modules/
+frontend/.env
+frontend/.env.*
+frontend/.vscode/
+frontend/build/          # React build folder
+frontend/.DS_Store      # Mac OS metadata
+
+# === Common ===
+**/.env.local
+**/.env.development
+**/.env.test
+**/.env.production
+**/dist/                # Vite/TS output
+**/coverage/            # Test coverage
+**/.cache/
+**/.idea/               # JetBrains IDE
+**/.eslintcache
+**/package-lock.json    # Use yarn.lock or npm-shrinkwrap.json instead if needed
+**/yarn.lock            # Only if not using npm
