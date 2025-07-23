@@ -20,22 +20,25 @@ function App() {
     Prism.highlightAll();
   }, []);
 
-  async function reviewCode() {
-    if (!code.trim()) return;
-    
-    setIsLoading(true);
-    setAnimation(true);
-    try {
-      const response = await axios.post('https://syntaxsense-ai.onrender.com/', { code });
-      setReview(response.data);
-    } catch (error) {
-      setReview('## Error\nUnable to get code review. Please try again.');
-      console.error(error);
-    } finally {
-      setIsLoading(false);
-      setTimeout(() => setAnimation(false), 1000);
-    }
+ async function reviewCode() {
+  if (!code.trim()) return;
+  
+  setIsLoading(true);
+  setAnimation(true);
+  try {
+    const response = await axios.post(
+      'https://syntaxsense-ai.onrender.com/ai/get-review', 
+      { code }
+    );
+    setReview(response.data);
+  } catch (error) {
+    console.error("Full error:", error.response?.data || error.message);
+    setReview('## Error\nUnable to get code review. Please try again.');
+  } finally {
+    setIsLoading(false);
+    setTimeout(() => setAnimation(false), 1000);
   }
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 flex flex-col">
