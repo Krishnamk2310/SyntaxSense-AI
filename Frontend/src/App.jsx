@@ -27,7 +27,7 @@ function App() {
   setAnimation(true);
   try {
     const response = await axios.post(
-      'https://syntaxsense-ai.onrender.com/ai/get-review', 
+      'https://syntaxsense-ai.onrender.com/get-review', 
       { code }
     );
     setReview(response.data);
