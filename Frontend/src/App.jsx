@@ -26,7 +26,7 @@ function App() {
     setIsLoading(true);
     setAnimation(true);
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code });
+      const response = await axios.post('https://syntaxsense-ai.onrender.com/', { code });
       setReview(response.data);
     } catch (error) {
       setReview('## Error\nUnable to get code review. Please try again.');
