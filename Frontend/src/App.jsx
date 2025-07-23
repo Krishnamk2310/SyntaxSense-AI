@@ -26,10 +26,7 @@ function App() {
   setIsLoading(true);
   setAnimation(true);
   try {
-    const response = await axios.post(
-      'https://syntaxsense-ai.onrender.com/get-review', 
-      { code }
-    );
+    const response = await axios.post('https://syntaxsense-ai.onrender.com/ai/get-review', { code })
     setReview(response.data);
   } catch (error) {
     console.error("Full error:", error.response?.data || error.message);
