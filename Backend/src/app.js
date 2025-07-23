@@ -10,5 +10,4 @@ app.use('/ai', aiRoutes);
 app.get('/',(req,res)=>{
     res.send('Hello world')
 })
-app.use('/ai',aiRoutes)
 module.exports = app;
