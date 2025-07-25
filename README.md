@@ -2,7 +2,6 @@
 
 **SyntaxSense AI** is a smart, AI-powered coding assistant that helps developers write, understand, and optimize code using natural language. Whether you're a beginner learning to code or an experienced developer looking to speed up your workflow, SyntaxSense makes coding more intuitive.
 
-![SyntaxSense AI Demo](https://your-demo-image-or-gif-link.com) <!-- Replace with actual image or gif link -->
 
 ## 🚀 Key Features
 
